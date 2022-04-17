@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="de">
 <head>
@@ -7,7 +7,87 @@
 	<style type="text/css"><!--
 		h1 { font-family: Verdana, Tahoma, Arial, sans-serif; font-size: 14pt; color: #000 }
 		body { font-family: Verdana, Tahoma, Arial, sans-serif; font-size: 8pt; background: #fff }
-		table, tr, td { font-family: Verdana, Tahoma, Arial, sans-serif; font-size: 9pt; color: #000; }
+		table {
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  table-layout: fixed;
+}
+
+table caption {
+  font-size: 1.5em;
+  margin: .5em 0 .75em;
+}
+
+table tr {
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  padding: .35em;
+}
+
+table th,
+table td {
+  padding: .625em;
+  text-align: center;
+}
+
+table th {
+  font-size: .85em;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 600px) {
+  table {
+    border: 0;
+  }
+
+  table caption {
+    font-size: 1.3em;
+  }
+  
+  table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+  
+  table tr {
+    border-bottom: 3px solid #ddd;
+    display: block;
+    margin-bottom: .625em;
+  }
+  
+  table td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: .8em;
+    text-align: right;
+  }
+  
+  table td::before {
+    /*
+    * aria-label has no advantage, it won't be read inside a table
+    content: attr(aria-label);
+    */
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  table td:last-child {
+    border-bottom: 0;
+  }
+}
+		/*table, tr, td { font-family: Verdana, Tahoma, Arial, sans-serif; font-size: 9pt; color: #000; }*/
 		a:link, a:visited, a:active { text-decoration: none; color: #03f; }
 		a:hover { text-decoration: none; color: #f03; }
 		.title { font-weight: bold; padding: 7px; margin: 0px; color: #000; }
@@ -16,7 +96,6 @@
 </head>
 <body>
 	<h1>Japanisu Songs Added History</h1>
-	<p>Este listado no garantiza que el 100% de las canciones mostradas se encuentren en la estación.</p>
 	<p>16/04/2022</p>
 	<table>
 		<tr>
